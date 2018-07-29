@@ -9,7 +9,7 @@ class Header extends Component {
 		return (
 		  <header className="header">
 			<HeaderLogo />
-			<HeaderTimer timer = "30" level = {this.props.level}/>
+			<HeaderTimer level = {this.props.level}/>
 			<HeaderLives lives = {this.props.lives}/>
 		  </header>
 		)

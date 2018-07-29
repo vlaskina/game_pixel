@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 class HeaderTimer extends Component {
 	
 	state = {
-		count: this.props.timer
+		count: 30
 	}
 	
 	componentDidMount() {
@@ -14,9 +14,14 @@ class HeaderTimer extends Component {
 		}, 1000)			
 	}
 	
-	shouldComponentUpdate(nextProps, nextState) {
-		if(nextProps) return true
-		
+	shouldComponentUpdate(nextProps) {
+		if(nextProps.level != this.props.level) {
+			this.setState({
+				count: 30
+			})
+			return true
+		}
+		return true
 	}
 	
 	render() {
