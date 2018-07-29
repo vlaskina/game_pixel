@@ -20,7 +20,7 @@ class GameScreen extends Component {
 		return (
 			<div>
 			<Header />
-			<div class="game">
+			<div className="game">
 				{this.task ? <Task task = {this.task} handleOnAnswerGiven = {this.handleOnAnswerGiven}/> : ""}
 				<div className="stats">
 				<StateGame />
