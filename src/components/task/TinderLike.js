@@ -9,12 +9,12 @@ class TinderLike extends Component {
 		<form className="game__content">
 		<img src={task.image.url} alt="Option 1" width="705" height="455"/>
 		 <label className="game__answer  game__answer--photo">
-          <input name="question1" type="radio" value="photo" onClick={this.handleOnAnswerGiven} />
-          <span>”ото</span>
+          <input name="question1" type="radio" value="photo" onClick={this.handleOnAnswerGiven} key={task.image.url}/>
+          <span>Фото</span>
         </label>
         <label className="game__answer  game__answer--wide  game__answer--paint">
-          <input name="question1" type="radio" value="painting" onClick={this.handleOnAnswerGiven} />
-          <span>ђисунок</span>
+          <input name="question1" type="radio" value="painting" onClick={this.handleOnAnswerGiven} key={task.image.url}/>
+          <span>Рисунок</span>
         </label>
 		</form>
 		)
