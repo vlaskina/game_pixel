@@ -1,4 +1,4 @@
-import {REQUEST_SUCCESS, GET_ANSWER, LOAD_START, OPEN_GREETING, OPEN_RULES, OPEN_GAME_SCREEN} from '../constans'
+import {REQUEST_SUCCESS, GET_ANSWER, LOAD_START, OPEN_GREETING, OPEN_RULES, OPEN_GAME_SCREEN, OPEN_INTRO} from '../constans'
 
 export function request() {
 	
@@ -46,3 +46,14 @@ export function openGameScreen() {
 	}
 }
 
+export function returnToIntroPage() {
+	return (dispatch, getState) => {
+		const state = getState()
+		const level = state.stateGame.level
+		const confirmationPage = state.pages.confirmationPage
+		dispatch({
+			type: OPEN_INTRO,
+			payload: {level, confirmationPage}
+		})
+	}
+}

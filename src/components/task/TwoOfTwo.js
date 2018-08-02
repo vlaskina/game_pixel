@@ -27,23 +27,23 @@ class TwoOfTwo extends Component {
 		<form className="game__content">
 		<div className="game__option" key="1">
 		<img src={task[0].image.url} alt="Option 1" width="468" height="458"/>
-		<label className="game__answer  game__answer--photo">
+		<label className="game__answer  game__answer--photo" key={task[0].image.url}>
           <input name="question1" type="radio" value="photo" onClick = {this.handleAnswer1}/>
           <span>Фото</span>
         </label>
-        <label className="game__answer  game__answer--wide  game__answer--paint">
-          <input name="question1" type="radio" value="painting" onClick = {this.handleAnswer1}/>
+        <label className="game__answer  game__answer--wide  game__answer--paint" key={task[0].image.url}>
+          <input name="question1" type="radio" value="painting" onClick={this.handleAnswer1}/>
           <span>Рисунок</span>
         </label>
 		</div>
 		<div className="game__option" key="2">
 		<img src={task[1].image.url} alt="Option 1" width="468" height="458"/>
-		<label className="game__answer  game__answer--photo">
-          <input name="question2" type="radio" value="photo" onClick = {this.handleAnswer2}/>
+		<label className="game__answer  game__answer--photo" key={task[1].image.url}>
+          <input name="question2" type="radio" value="photo" onClick={this.handleAnswer2}/>
           <span>Фото</span>
         </label>
-        <label className="game__answer  game__answer--wide  game__answer--paint">
-          <input name="question2" type="radio" value="painting" onClick = {this.handleAnswer2}/>
+        <label className="game__answer  game__answer--wide  game__answer--paint" key={task[1].image.url}>
+          <input name="question2" type="radio" value="painting" onClick={this.handleAnswer2}/>
           <span>Рисунок</span>
         </label>
 		</div>

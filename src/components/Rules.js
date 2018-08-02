@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {openGameScreen} from '../AC'
+import HeaderLogo from './header/HeaderLogo'
 
 class Greeting extends Component {
 	
@@ -14,12 +15,7 @@ class Greeting extends Component {
 		return (
 		   <div>
 		   <header className="header">
-			<div className="header__back">
-			  <button className="back">
-				<img src="img/arrow_left.svg" width="45" height="45" alt="Back" />
-				<img src="img/logo_small.svg" width="101" height="44" />
-			  </button>
-			</div>
+			<HeaderLogo />
 		  </header>
 		  <div className="rules">
 			<h1 className="rules__title">Правила</h1>

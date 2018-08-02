@@ -10,6 +10,8 @@ export const TASK_COUNT = 9;
 
 export const OPEN_PAGES = 'openPages'
 
+export const OPEN_INTRO = 'openIntro'
+
 export const PAGES = {
 	intro: true,
 	greeting: false,

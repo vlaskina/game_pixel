@@ -1,9 +1,13 @@
-import {STATE_DEFAULT, GET_ANSWER, ANSWER_TYPE, TIME_LIMITS, RESULT_GAME, TASK_COUNT} from '../constans'
+import {STATE_DEFAULT, GET_ANSWER, ANSWER_TYPE, TIME_LIMITS, RESULT_GAME, TASK_COUNT, OPEN_INTRO} from '../constans'
 
 export default(state = STATE_DEFAULT, action) => {
 	const {type} = action
 	
 	switch(type) {
+		case OPEN_INTRO:
+			if(action.payload.confirmationPage) return STATE_DEFAULT
+			return state
+		break
 		case GET_ANSWER:
 			const {answer, task, startTime, finishTime} = action.payload
 			const {NORMAL, FAST, SLOW, WRONG, UNKNOWN} = ANSWER_TYPE

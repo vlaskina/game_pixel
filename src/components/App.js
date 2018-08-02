@@ -6,6 +6,7 @@ import Rules from './Rules'
 import GameScreen from './GameScreen'
 import {request} from '../AC'
 import Loading from './Loading'
+import ConfirmationPage from './ConfirmationPage'
 
 class App extends Component {
 	
@@ -14,7 +15,7 @@ class App extends Component {
 	}
 	
 	render() {
-		const {	intro, greeting, rules, gameScreen} = this.props.pages
+		const {	intro, greeting, rules, gameScreen, confirmationPage} = this.props.pages
 		
 		if (this.props.loading) return <Loading />
 		
@@ -22,6 +23,7 @@ class App extends Component {
 		if (greeting) return <Greeting />
 		if (rules) return <Rules />
 		if (gameScreen) return <GameScreen />
+		if (confirmationPage) return <ConfirmationPage />
 		
 	}
 	
