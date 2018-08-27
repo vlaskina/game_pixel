@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "css-loader": "^0.28.11",
+    "mongoose": "^5.2.9",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-addons-css-transition-group": "^15.6.2",

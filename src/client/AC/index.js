@@ -8,14 +8,17 @@ export function request() {
 		})
 		
 		
-		fetch('https://es.dump.academy/pixel-hunter/questions')
+		fetch('http://localhost:3000/api/tasks')
 			.then((response) => {
-				return response.json()
+					return response.json();
 			})
 			.then((data) => {
 				dispatch({
 					type: REQUEST_SUCCESS, 
 					payload: data})				
+			})
+			.catch((err)=> {
+				console.log(err);
 			})
 		
 	}
